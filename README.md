@@ -2,6 +2,12 @@
 
 A bold, striking blog template built with **Next.js 14**, **Tailwind CSS**, and **MDX**. Features a distinctive neobrutalism design aesthetic with thick black borders, vibrant neon colors, and flat, playful layouts.
 
+## 🌐 Live Demo
+
+**See it in action:** [next-neo-brutalism-blog-template.vercel.app](https://next-neo-brutalism-blog-template.vercel.app)
+
+Click around, browse posts, experience the bold neobrutalism aesthetic.
+
 ![Neo Brutalism Blog](./docs/preview.png)
 
 ## ✨ Features
