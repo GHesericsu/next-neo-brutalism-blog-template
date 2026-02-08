@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
 
@@ -65,6 +66,21 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             </p>
           )}
         </div>
+
+        {/* Featured image */}
+        {post.featuredImage && (
+          <div className="neo-card bg-white p-2 mb-8 overflow-hidden">
+            <div className="relative w-full h-[400px] md:h-[500px]">
+              <Image
+                src={post.featuredImage}
+                alt={post.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        )}
 
         {/* Post content */}
         <div className="neo-card bg-white p-8">

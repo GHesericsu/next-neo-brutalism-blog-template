@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Post } from '@/lib/posts'
 
 const colorMap: Record<string, string> = {
@@ -17,10 +18,22 @@ export function PostCard({ post }: { post: Post }) {
   return (
     <Link href={`/blog/${post.slug}`} className="block">
       <article className="neo-card p-6 h-full flex flex-col">
-        {/* Color accent bar */}
-        <div className={`${bgColor} h-24 -mx-6 -mt-6 mb-4 border-b-[3px] border-black flex items-center justify-center`}>
-          <span className="text-4xl">📝</span>
-        </div>
+        {/* Featured image or color accent bar */}
+        {post.featuredImage ? (
+          <div className="relative h-48 -mx-6 -mt-6 mb-4 border-b-[3px] border-black overflow-hidden">
+            <Image
+              src={post.featuredImage}
+              alt={post.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+        ) : (
+          <div className={`${bgColor} h-24 -mx-6 -mt-6 mb-4 border-b-[3px] border-black flex items-center justify-center`}>
+            <span className="text-4xl">📝</span>
+          </div>
+        )}
         
         <h3 className="text-xl font-bold mb-2">{post.title}</h3>
         

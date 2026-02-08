@@ -12,6 +12,7 @@ export interface Post {
   tags?: string[]
   content: string
   color?: string
+  featuredImage?: string
 }
 
 export async function getAllPosts(): Promise<Post[]> {
@@ -38,6 +39,7 @@ export async function getAllPosts(): Promise<Post[]> {
         tags: data.tags || [],
         content,
         color: data.color || 'neo-lavender',
+        featuredImage: data.featuredImage,
       }
     })
     .sort((a, b) => (new Date(b.date) > new Date(a.date) ? 1 : -1))
