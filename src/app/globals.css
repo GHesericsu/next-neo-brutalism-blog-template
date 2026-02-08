@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --neo-border: 3px;
+    --neo-radius: 0px;
+  }
+  
+  body {
+    @apply bg-neo-pink min-h-screen;
+  }
+}
+
+@layer components {
+  /* Neobrutalism Card */
+  .neo-card {
+    @apply bg-white border-[3px] border-black shadow-neo;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+  
+  .neo-card:hover {
+    @apply shadow-neo-hover;
+    transform: translate(2px, 2px);
+  }
+
+  /* Neobrutalism Button */
+  .neo-btn {
+    @apply px-6 py-3 bg-neo-lime border-[3px] border-black shadow-neo font-bold uppercase tracking-wide;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+  
+  .neo-btn:hover {
+    @apply shadow-neo-hover;
+    transform: translate(2px, 2px);
+  }
+
+  .neo-btn-secondary {
+    @apply neo-btn bg-white;
+  }
+
+  /* Neobrutalism Input */
+  .neo-input {
+    @apply px-4 py-3 bg-white border-[3px] border-black focus:outline-none focus:shadow-neo-sm;
+  }
+
+  /* Neobrutalism Tag/Badge */
+  .neo-tag {
+    @apply inline-block px-3 py-1 text-sm font-medium bg-white border-2 border-black;
+  }
+
+  /* Blog post content styling */
+  .prose-neo {
+    @apply prose prose-lg max-w-none;
+  }
+  
+  .prose-neo h1 {
+    @apply text-4xl font-black mb-6;
+  }
+  
+  .prose-neo h2 {
+    @apply text-2xl font-bold mt-8 mb-4;
+  }
+  
+  .prose-neo h3 {
+    @apply text-xl font-bold mt-6 mb-3;
+  }
+  
+  .prose-neo p {
+    @apply mb-4 leading-relaxed;
+  }
+  
+  .prose-neo a {
+    @apply text-neo-purple underline decoration-2 underline-offset-2 hover:bg-neo-yellow;
+  }
+  
+  .prose-neo code {
+    @apply bg-neo-lavender px-2 py-0.5 border border-black text-sm font-mono;
+  }
+  
+  .prose-neo pre {
+    @apply bg-black text-white p-4 border-[3px] border-black overflow-x-auto;
+  }
+  
+  .prose-neo pre code {
+    @apply bg-transparent border-none p-0;
+  }
+  
+  .prose-neo blockquote {
+    @apply border-l-4 border-black pl-4 italic bg-neo-lavender py-2;
+  }
+  
+  .prose-neo ul {
+    @apply list-disc pl-6 mb-4;
+  }
+  
+  .prose-neo ol {
+    @apply list-decimal pl-6 mb-4;
+  }
+  
+  .prose-neo li {
+    @apply mb-2;
+  }
+}
