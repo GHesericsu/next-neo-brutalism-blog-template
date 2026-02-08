@@ -75,7 +75,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 src={post.featuredImage}
                 alt={post.title}
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority
               />
             </div>
