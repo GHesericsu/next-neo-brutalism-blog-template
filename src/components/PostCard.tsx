@@ -20,7 +20,7 @@ export function PostCard({ post }: { post: Post }) {
       <article className="neo-card p-6 h-full flex flex-col">
         {/* Featured image or color accent bar */}
         {post.featuredImage ? (
-          <div className="relative h-48 -mx-6 -mt-6 mb-4 border-b-[3px] border-black overflow-hidden">
+          <div className="relative w-full aspect-[4/3] -mx-6 -mt-6 mb-4 border-b-[3px] border-black overflow-hidden">
             <Image
               src={post.featuredImage}
               alt={post.title}

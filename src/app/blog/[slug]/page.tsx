@@ -70,7 +70,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         {/* Featured image */}
         {post.featuredImage && (
           <div className="neo-card bg-white p-2 mb-8 overflow-hidden">
-            <div className="relative w-full h-[400px] md:h-[500px]">
+            <div className="relative w-full aspect-[4/3]">
               <Image
                 src={post.featuredImage}
                 alt={post.title}
