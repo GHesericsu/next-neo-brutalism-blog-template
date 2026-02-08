@@ -20,7 +20,7 @@ A bold, striking blog template built with **Next.js 14**, **Tailwind CSS**, and 
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/yourusername/next-neo-brutalism-blog-template.git my-blog
+git clone https://github.com/GHesericsu/next-neo-brutalism-blog-template.git my-blog
 cd my-blog
 npm install
 ```
@@ -179,7 +179,7 @@ fontFamily: {
 
 ### Deploy to Vercel (Recommended)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/next-neo-brutalism-blog-template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/GHesericsu/next-neo-brutalism-blog-template)
 
 Or manually:
 
